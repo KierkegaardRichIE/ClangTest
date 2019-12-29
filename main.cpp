@@ -1,39 +1,45 @@
-#include<iostream>
-<<<<<<< HEAD
-
-int main(void){
-    int daffodil, x, y, z;
-    for ( daffodil = 0; daffodil < 999; ++daffodil)
+#include <iostream>
+using namespace std;
+int main(void)
+{
+    /*  int daffodil, x, y, z;
+    for (daffodil = 0; daffodil < 999; ++daffodil)
     {
-        x = daffodil / 100;    //åˆ†è§£ç™¾ä½æ•°
-        y = (daffodil - x * 100) / 10;    //åˆ†è§£åä½æ•°
-        z = (daffodil % 10);    //åˆ†è§£ä¸ªä½æ•°
-        if (daffodil==x*x*x+y*y*y+z*z*z)
+        x = daffodil / 100;            //·Ö½â°ÙÎ»Êý
+        y = (daffodil - x * 100) / 10; //·Ö½âÊ®Î»Êý
+        z = (daffodil % 10);           //·Ö½â¸öÎ»Êý
+        if (daffodil == x * x * x + y * y * y + z * z * z)
         {
-            printf("%5d", daffodil);
+            printf("%7d", daffodil);
         }
-        
     }
-=======
-#define SQUARES 64
-int main(void){
-    const double CROP = 2E16;
-    double current, total;
-    int counter = 1;
-    printf("square      grains      total       ");
-    printf("fraction of \n");
-    printf("            added       grains      ");
-    printf("world total\n");
-    total = current = 1.0;
-    printf("%4d %13.2e %12.2e %12.2e\n", counter, current, total, total / CROP);
-    while (counter < SQUARES)
+    std::cout << std::endl;
+    short c = 7;
+    std::cout << sizeof(c) << std::endl;
+    (double)c;
+    std::cout << sizeof(c) << std::endl;
+    cout << "char:\t" << sizeof(char) << "\t×Ö½Ú" << endl;
+    cout << "int:\t" << sizeof(int) << "\t×Ö½Ú" << endl;
+    cout << "float:\t" << sizeof(float) << "\t×Ö½Ú" << endl;
+    cout << "double:\t" << sizeof(double) << "\t×Ö½Ú" << endl;
+*/
+    char ch;
+    cout << "Input a key and press Enter." << endl;
+start:
+
+    ch = getchar();
+    if ('a' <= ch && ch <= 'z')
     {
-        counter =counter+1;
-        current = 2.0 * current;
-        total = total + current;
-        printf("%4d %13.2e %12.2e %12.2e\n", counter, current, total, total / CROP);       
+        ch = ch - 32;
+        putchar(ch);
+        putchar('\n');
     }
-    printf("That`s all");
->>>>>>> b35e8b787d0188de134e3b34ee985ae3e874c9e9
+    else if ('A' <= ch && ch <= 'Z')
+    {
+        ch = ch + 32;
+        putchar(ch);
+        putchar('\n');
+    }
+    goto start;
     return 0;
 }
