@@ -3,13 +3,15 @@
 unsigned long Fact(unsigned int n);
 int main()
 {
-    int m;
+    int m, k;
+    double P;
     do
     {
-        printf("Input m:");
-        scanf_s("%d", &m);
-    } while (m < 0);
-    printf("%d!=%lu\n", m, Fact(m));
+        printf("Input m,k(m>=k>0):");
+        scanf_s("%d,%d", &m, &k);
+    } while (m < k || m < 0 || k < 0);
+    P = (double)Fact(m) / (Fact(k) * Fact(m - k));
+    printf("P=%.0f\n", P);
     printf("press any key to continue.");
     return 0;
 }
